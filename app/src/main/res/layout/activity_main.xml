@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#e7373c"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/imageButton_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/im_webrefrence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hxp.paper.MyScrollView
+            android:id="@+id/sc"
+            android:descendantFocusability="afterDescendants"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="afterDescendants"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/textcolor_gray" />
+
+                <GridView
+                    android:id="@+id/gv_hide"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:listSelector="@android:color/transparent"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:padding="10dp"
+                    android:verticalSpacing="10dp" />
+
+                <com.hxp.paper.MyGridView
+                    android:id="@+id/gv_paper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:listSelector="@android:color/transparent"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:padding="10dp"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+        </com.hxp.paper.MyScrollView>
+
+        <LinearLayout
+            android:id="@+id/lin_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible">
+            <com.hxp.paper.HorizontalListView
+                android:id="@+id/horizon_listview"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:focusable="true"
+                android:layout_height="40dp">
+            </com.hxp.paper.HorizontalListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

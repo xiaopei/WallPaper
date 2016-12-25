@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+                <TextView
+                    android:id="@+id/btn_money"
+                    android:layout_width="65dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/white"
+                    android:text="20元"
+                    android:gravity="center"
+                    android:textColor="@color/textcolor_gray"
+                    android:textSize="12sp" />
+</LinearLayout>
